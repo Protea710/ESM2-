@@ -1,0 +1,28 @@
+{
+  "freeze_created_utc": "2026-11-16T17:43:34.121239+00:00",
+  "gate": "awaiting exact user phrase: 检验集确认",
+  "prohibition": "No test-set per-position or per-mutation residual statistics before confirmation.",
+  "artifacts": [
+    {
+      "path": "results/p1/P1_PROPOSITION.md",
+      "sha256": "3b8ae8f3536c39a0ddbc87a6132e6444113b9bc16a6399a1cf90c977b17bbf89",
+      "mtime_ns": 1794850937449345638,
+      "mtime_utc": "2026-11-16T17:42:17.449346+00:00",
+      "bytes": 2617
+    },
+    {
+      "path": "results/p1/P1_FORMATION.csv",
+      "sha256": "7b7ae8c3eb826fcf7d6bd84a03cf69cd0073378116a0bde497f7bc2eb6711e9b",
+      "mtime_ns": 1794850988138395155,
+      "mtime_utc": "2026-11-16T17:43:08.138395+00:00",
+      "bytes": 10223
+    },
+    {
+      "path": "results/p1/P1_TEST.csv",
+      "sha256": "10ba324ebc70617c7d91c3bd210353faeedb18d598a505c0fbe43167bb23188a",
+      "mtime_ns": 1794850988138924570,
+      "mtime_utc": "2026-11-16T17:43:08.138925+00:00",
+      "bytes": 5308
+    }
+  ]
+}

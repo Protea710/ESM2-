@@ -1,0 +1,33 @@
+{
+  "freeze_created_utc": "2026-11-16T18:00:42.704960+00:00",
+  "gate": "awaiting exact user confirmation before any P2 test-set residual statistics",
+  "prohibition": "No P2 test-set per-position/per-mutation residual statistics and no R_i recomputation before confirmation.",
+  "p1_reference": {
+    "theta": -0.13903587459103406,
+    "ci_low": -0.17672678037410106,
+    "ci_high": -0.08386809270896523
+  },
+  "artifacts": [
+    {
+      "path": "results/p2/P2_PROPOSITION.md",
+      "sha256": "ef0e814e43008da4befddd02b7b88f628042476f0842ff9c585b94feee3a3865",
+      "mtime_ns": 1794852021677843176,
+      "mtime_utc": "2026-11-16T18:00:21.677843+00:00",
+      "bytes": 3781
+    },
+    {
+      "path": "results/p2/P2_FORMATION.csv",
+      "sha256": "0b8f5236753ed71ef55cb40843ddf96e7762100fdf9c771d493c578f43a31d5b",
+      "mtime_ns": 1794852008156810476,
+      "mtime_utc": "2026-11-16T18:00:08.156811+00:00",
+      "bytes": 6366
+    },
+    {
+      "path": "results/p2/P2_TEST.csv",
+      "sha256": "0f0c2aac6289e8b6ef85815c51ddd52e11e29c7481623fe47c39140907352754",
+      "mtime_ns": 1794852008157125620,
+      "mtime_utc": "2026-11-16T18:00:08.157126+00:00",
+      "bytes": 3994
+    }
+  ]
+}

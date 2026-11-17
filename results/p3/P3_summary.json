@@ -1,0 +1,13 @@
+{
+  "n_test_assays": 26,
+  "n_eligible": 26,
+  "n_excluded": 0,
+  "ri_logpwt_max_dev": 8.881784197001252e-16,
+  "theta_3": 0.1365596124354852,
+  "ci_low": 0.0022277485306917977,
+  "ci_high": 0.2903578998125327,
+  "rule": "REFUTED iff ci_low <= 0.10, else SUPPORTED",
+  "verdict": "REFUTED",
+  "bootstrap_seed": 20261117,
+  "bootstrap_reps": 10000
+}

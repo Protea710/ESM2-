@@ -1,0 +1,46 @@
+{
+  "freeze_created_utc": "2026-11-16T18:17:13.589869+00:00",
+  "gate": "awaiting exact user confirmation before any P3 test-set residual statistics or R_i recomputation",
+  "prohibition": "No P3 test-set residual statistics, no DMS_score reads of P3 test assays, no R_i recomputation before confirmation.",
+  "p1_reference": {
+    "theta": -0.13903587459103406,
+    "ci_low": -0.17672678037410106,
+    "ci_high": -0.08386809270896523,
+    "verdict": "REFUTED"
+  },
+  "p2_reference": {
+    "theta_norm": 0.06994155695061172,
+    "ci_low": 0.0012274732179290981,
+    "ci_high": 0.1289426427848171,
+    "verdict": "INDETERMINATE"
+  },
+  "census": {
+    "total_doubles_both_singles": 819047,
+    "eligible_assays_67": 67,
+    "test_assays": 26,
+    "test_doubles": 130340
+  },
+  "artifacts": [
+    {
+      "path": "results/p3/P3_PROPOSITION.md",
+      "sha256": "618840c25f90209a8e275f05c75391d31eb8d18b559727f5bdf1bab32c46b607",
+      "mtime_ns": 1794853008805977739,
+      "mtime_utc": "2026-11-16T18:16:48.805978+00:00",
+      "bytes": 4947
+    },
+    {
+      "path": "results/p3/P3_FORMATION.csv",
+      "sha256": "118096aac5c11c01c214ad98d9ccb6f143b97bcfec5c0d950b6d6a5b62084618",
+      "mtime_ns": 1794852994392867146,
+      "mtime_utc": "2026-11-16T18:16:34.392867+00:00",
+      "bytes": 13741
+    },
+    {
+      "path": "results/p3/P3_TEST.csv",
+      "sha256": "a6ff94f1491feac01f689b665cc968a1f437c8c17097874f0896e71e378d999d",
+      "mtime_ns": 1794852994391945857,
+      "mtime_utc": "2026-11-16T18:16:34.391946+00:00",
+      "bytes": 2395
+    }
+  ]
+}

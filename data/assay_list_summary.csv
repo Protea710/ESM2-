@@ -1,0 +1,9 @@
+assays_total,217
+pass_seqlen_1022,201
+pass_count_500,202
+assays_pass,191
+total_mutants_pass,2411093
+total_forward_upper,1822479
+multi_assays,69
+seq_len_max,934
+seq_len_min,37

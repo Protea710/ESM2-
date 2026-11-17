@@ -1,0 +1,12 @@
+{
+  "n_test_assays": 65,
+  "n_eligible": 61,
+  "n_excluded": 4,
+  "theta": -0.13903587459103406,
+  "ci_low": -0.17672678037410106,
+  "ci_high": -0.08386809270896523,
+  "rule": "REFUTED iff ci_low <= 0.10",
+  "verdict": "REFUTED",
+  "bootstrap_seed": 20261117,
+  "bootstrap_reps": 10000
+}

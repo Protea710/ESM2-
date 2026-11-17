@@ -1,0 +1,15 @@
+# macOS / 工具缓存
+.DS_Store
+.ruff_cache/
+__pycache__/
+*.pyc
+
+# ScienceGuru 内部执行状态（含本机绝对路径与内部会话标识）
+__scienceguru_tmp/
+
+# 逐突变总表（126 MiB，超出 clone 合理体积；行数与哈希见
+# results/master_tables/MANIFEST.json，可用 scripts 重跑再生成）
+results/master_tables/*.csv.gz
+
+# 本地运行日志
+*.log

@@ -1,0 +1,51 @@
+{
+  "ri_logpwt_max_dev": 0.0,
+  "location": "/work/master_tables (lab 机) 与 results/master_tables/ (本机可见目录)，两份逐位一致",
+  "transfer_note": "gz 本体已通过 exec 落盘通道（单次 ≤10MiB，base64 分片 19 片）搬入本机 results/master_tables/；三文件 SHA256 与本清单逐位一致，本机 gunzip -t 与行数复验通过",
+  "total_rows_all_tables": 2411093,
+  "files": {
+    "singles.csv.gz": {
+      "rows": 641637,
+      "bytes": 31786275,
+      "columns": [
+        "DMS_id", "mutant", "position", "wt_aa", "mut_aa", "DMS_score",
+        "model_score", "r", "R_i", "llr_norm", "margin", "logp_wt",
+        "entropy", "top1_prob", "pos_norm", "e_i", "n_single_at_pos",
+        "p1_set", "p2_set", "p3_set", "rounds_test"
+      ],
+      "sha256": "8b53ed33c91db9e45bda9d905f55055ac91622381a6a21e5e084195a2d5c0b3f"
+    },
+    "doubles.csv.gz": {
+      "rows": 826245,
+      "bytes": 57145271,
+      "columns": [
+        "DMS_id", "mutant", "pos1", "wt1", "mut1", "pos2", "wt2", "mut2",
+        "DMS_score", "model_score", "r", "llr1", "llr2", "R_i1", "R_i2",
+        "llr_norm1", "llr_norm2", "eps", "margin1", "margin2", "entropy1",
+        "entropy2", "p1_set", "p2_set", "p3_set", "rounds_test"
+      ],
+      "sha256": "dd9eeceedb3c2740d8e2db77306c70724c4c96ce03e9c08e0c009a12ca3b442c"
+    },
+    "higher.csv.gz": {
+      "rows": 943211,
+      "bytes": 43075554,
+      "columns": [
+        "DMS_id", "mutant", "k", "positions", "wt_list", "mut_list",
+        "DMS_score", "model_score", "r", "llr_norm_total",
+        "p1_set", "p2_set", "p3_set", "rounds_test"
+      ],
+      "sha256": "dc05feaed3d7d8ef242ec88c89c4592b3b67ee8eee927eafed0cccc1aa907109"
+    }
+  },
+  "column_notes": {
+    "r": "A 段残差：测定内全体有效突变 z 标准化（DMS 与模型分各按 ddof=0）后 z_exp - z_model",
+    "model_score": "masked-marginals LLR（单点=该位点 LLR；双点=两位点之和，WT 上下文）",
+    "R_i": "该位点 WT 上下文 19 个非 WT 替代 LLR 的最大绝对值（全 191 测定重算，logp(wt) 复核偏差 0.0）",
+    "llr_norm": "LLR / R_i（P2 冻结口径）",
+    "eps": "双点实验非加性：DMS_double - DMS_s1 - DMS_s2（原始尺度；任一组份单点缺失或分值无效时为空）",
+    "e_i": "该位点单点突变平均|r|（修复对齐后的 A 段重算值）",
+    "p1_set/p2_set/p3_set": "该测定在对应轮次的形成/检验标记（formation/test/-）",
+    "rounds_test": "该行突变实际进入冻结检验统计的轮次（P1/P2 单点；P3 双点；分号分隔）"
+  },
+  "rerun_evidence": "compare.csv/P1/P2/P3 per_assay 全部 byte_equal=True；三轮 theta 与 CI 逐位一致（见 docs/FINAL_REPORT.md 第 4 节）"
+}

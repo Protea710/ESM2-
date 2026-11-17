@@ -1,0 +1,14 @@
+{
+  "n_test_assays": 48,
+  "n_eligible": 42,
+  "n_excluded": 6,
+  "ri_logpwt_max_dev": 8.881784197001252e-16,
+  "theta_norm": 0.06994155695061172,
+  "ci_low": 0.0012274732179290981,
+  "ci_high": 0.1289426427848171,
+  "null_band": [-0.05, 0.05],
+  "rule": "SUPPORTED iff ci_low>=-0.05 and ci_high<=0.05; REFUTED iff ci_high<-0.05 or ci_low>0.05; else INDETERMINATE",
+  "verdict": "INDETERMINATE",
+  "bootstrap_seed": 20261117,
+  "bootstrap_reps": 10000
+}
