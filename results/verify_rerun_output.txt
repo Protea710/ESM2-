@@ -1,0 +1,46 @@
+========================================================================
+verify_rerun.py 实际终端输出（存档转录件）
+========================================================================
+
+执行背景
+--------
+命令     : python3 /work/scripts_lab/verify_rerun.py
+执行环境 : lab 机（RTX 4090, torch 2.11.0+cu128），/work 目录
+执行时间 : 2026-11-16（RSI-12，最终交付轮）
+比对对象 :
+  A 面 = /work/run1_archive/   —— 首次运行的存档（A 段 + P1/P2/P3 输出）
+  B 面 = 第二次全量重跑（run_all.sh）刚产出的同名文件
+
+本文件性质
+----------
+这是当时终端输出的逐字转录，不是可由读者逐字节复现的产物：
+run1_archive 只存在于当时的 lab 机上。读者能复核的是：
+
+  1. 本文件中的 θ / CI 数值，可与仓库内 results/p1 p2 p3/ 的
+     *_summary.json、*_per_assay.csv 逐项对照；
+  2. 判定与冻结规则的一致性，可用 scripts/check_p1_results.py
+     （p2/p3 同理）独立重算——该脚本不需要 GPU。
+
+原始输出（未删改，含那处不完美）
+--------------------------------
+
+[assay_summary.csv] byte_equal=False rows=191 max_abs_dev={'seconds': 2.2000000000000455}
+[compare.csv] byte_equal=True rows=191 numeric identical
+[P1_per_assay.csv] byte_equal=True rows=61 numeric identical
+[P2_per_assay.csv] byte_equal=True rows=42 numeric identical
+[P3_per_assay.csv] byte_equal=True rows=26 numeric identical
+[P1_summary.json] theta/ci bit-identical: theta=-0.1390358746 ci=[-0.1767,-0.0839] verdict=REFUTED
+[P2_summary.json] theta/ci bit-identical: theta=+0.0699415570 ci=[+0.0012,+0.1289] verdict=INDETERMINATE
+[P3_summary.json] theta/ci bit-identical: theta=+0.1365596124 ci=[+0.0022,+0.2904] verdict=REFUTED
+RERUN COMPARISON COMPLETE
+
+解读
+----
+- 唯一 byte_equal=False 的是 assay_summary.csv 的墙钟计时列 seconds
+  （两次运行最大差 2.2 秒）——那是「跑了多久」，不是科学量；
+  同文件的 rho 列逐字节一致。
+- 三轮的效应量、置信区间与判定全部逐位复现。
+- 判定与冻结规则的关系：
+  P1 CI=[-0.1767,-0.0839]，下限 <= 0.10 → REFUTED
+  P2 零带 ±0.05，CI 上限 0.1289 > 0.05 → INDETERMINATE
+  P3 CI 下限 +0.0022 <= 0.10 → REFUTED
